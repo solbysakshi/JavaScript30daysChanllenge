@@ -103,4 +103,15 @@ async function getData1() {
 }
 
 
+async function getData2() {
+    try {
+        const res = await fetch()
+        const data = await res.json()
+        console.log(data)
+    } catch (error) {
+        console.log("Error" , err);
+    }
+}
+
+
 
