@@ -139,4 +139,34 @@ class Person6 {
     
 }
 console.log(Person6.genericgreet());
-console.log(Person6.greet());// gives error bcoz greet is not a function
+//console.log(Person6.greet());// gives error bcoz greet is not a function
+
+// Task 6: Add a static property to the Student class to keep track of the number of students created. Increment this property in the constructor and log the total number of students.
+
+class Person7 {
+    constructor(name , age) {
+        this.name = name;
+        this.age = age;
+    }
+    greet(){
+        return `Hello, my name is ${this.name} and I am ${this.age} years old`;
+    }
+}
+
+class children extends Person7 {
+    static studentCount = 0;
+    constructor (name , age , childrenId){
+        super(name ,age);
+        this.childrenId = childrenId;
+        children.studentCount++;
+
+    }
+
+    static getStudentCount () {
+        return `Total number of students: ${children.studentCount}`;
+    }
+}
+const student1 = new children('Jane Doe', 20, 'S12345');
+const student2 = new children('John Smith', 22, 'S67890');
+console.log(children.getStudentCount());
+
