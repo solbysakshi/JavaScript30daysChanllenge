@@ -19,6 +19,7 @@ console.log(p1.greeting());
 p1.updateage(24);
 
 
+
 // Task 2: Add a method to the Person class that updates the age property and logs the updated age.
 class Person3 {
     constructor(name, age) {
